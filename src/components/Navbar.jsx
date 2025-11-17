@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Navbar() {
   return (
@@ -13,6 +14,9 @@ export default function Navbar() {
           </Link>
           <Link href="/products" className="text-white/80 hover:text-white transition">
             Produkter
+          </Link>
+          <Link href="/cart" className="hover:opacity-80 transition">
+            <Image src="/kurv.png" alt="Indkøbskurv" width={24} height={24} className="invert" />
           </Link>
         </nav>
       </div>
