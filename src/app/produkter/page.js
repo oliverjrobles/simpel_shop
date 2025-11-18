@@ -11,6 +11,7 @@ export default function ProdukterPage() {
   useEffect(() => {
     async function fetchProducts() {
       const res = await fetch("https://dummyjson.com/products/category/mens-shoes");
+
       const data = await res.json();
       setProducts(data.products);
     }
@@ -21,8 +22,7 @@ export default function ProdukterPage() {
   if (!products) {
     return <div className="min-h-screen bg-neutral-950 flex items-center justify-center text-gray-400">Indlæser produkter...</div>;
   }
-
-  const filteredProducts = selectedCategory === "alle" ? products : products.filter((product) => product.category === selectedCategory);
+  const filteredProducts = selectedCategory === "alle" ? products : products.filter((product) => product.brand === selectedCategory);
 
   return (
     <div className="min-h-screen bg-neutral-950 text-white">
@@ -37,8 +37,10 @@ export default function ProdukterPage() {
           <div className="mt-4 mb-6">
             <label className="block text-sm mb-2 text-gray-300">Filtrer efter kategori</label>
             <select value={selectedCategory} onChange={(e) => setSelectedCategory(e.target.value)} className="rounded-full bg-neutral-900 border border-neutral-700 px-4 py-2 text-sm">
-              <option value="alle">Alle produkter</option>
-              <option value="mens-shoes">Herre-sko</option>
+              <option value="alle">Alle brands</option>
+              <option value="Nike">Nike</option>
+              <option value="Puma">Puma</option>
+
               {/* Her kan du tilføje flere kategorier senere */}
             </select>
           </div>

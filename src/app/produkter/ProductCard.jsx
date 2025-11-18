@@ -20,7 +20,7 @@ export default function ProductCard({ product }) {
         </div>
       </Link>
 
-      <button onClick={() => addToCart(product)} className="w-full mt-3 rounded-full border border-white-400 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-orange-100 transition hover:bg-blue-400 hover:text-black">
+      <button onClick={() => addToCart(product)} className="w-full mt-3 rounded-full border border-white-400 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-white-100 transition hover:bg-blue-400 hover:text-black">
         Læg i kurv
       </button>
     </div>
