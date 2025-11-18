@@ -29,7 +29,7 @@ export default function ProdukterPage() {
       {/* PAGE CONTENT */}
       <main className="pt-32 px-6">
         <div className="mx-auto max-w-6xl">
-          <h1 className="text-2xl font-semibold tracking-wide text-orange-200">Produkter</h1>
+          <h1 className="text-2xl font-semibold tracking-wide text-white-200">Produkter</h1>
 
           {/* GRID MED PRODUKTER */}
           <ProductGrid products={products} />

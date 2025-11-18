@@ -31,22 +31,22 @@ export default function ProductDetailsPage() {
         <div className="mx-auto max-w-6xl grid gap-10 md:grid-cols-[2fr,1fr]">
           {/* VENSTRE SIDE: billede + info */}
           <section>
-            <Link href="/produkter" className="text-sm text-orange-200 hover:text-blue-200">
+            <Link href="/produkter" className="text-sm text-blue-200 hover:text-blue-200">
               &lt; Tilbage
             </Link>
 
             <div className="mt-6 flex flex-col gap-6 md:flex-row">
               {/* stort billede */}
-              <div className="relative w-full md:w-[320px] aspect-square rounded-3xl border border-orange-500/50 bg-black/50 overflow-hidden">
+              <div className="relative w-full md:w-[320px] aspect-square rounded-3xl border border-white-500/50 bg-black/50 overflow-hidden">
                 <Image src={product.thumbnail} alt={product.title} fill className="object-cover" />
               </div>
 
               {/* tekst */}
               <div className="flex-1 space-y-4">
-                <h1 className="text-2xl font-semibold text-orange-200">{product.title}</h1>
+                <h1 className="text-2xl font-semibold text-blue-200">{product.title}</h1>
                 <p className="text-sm text-neutral-300">{product.description}</p>
 
-                <p className="text-lg font-medium text-orange-300">{product.price},- kr</p>
+                <p className="text-lg font-medium text-white-300">{product.price},- kr</p>
 
                 <p className="text-xs text-neutral-400">
                   Brand: {product.brand || "Ukendt"} • Kategori: {product.category}
@@ -56,7 +56,7 @@ export default function ProductDetailsPage() {
 
             {/* Simple “reviews”-sektion */}
             <section className="mt-10 border-t border-neutral-800 pt-6">
-              <h2 className="mb-3 text-lg font-semibold text-orange-200">Reviews</h2>
+              <h2 className="mb-3 text-lg font-semibold text-white-200">Reviews</h2>
               <p className="text-sm text-neutral-300 mb-2">Rating: {product.rating} ★</p>
               <div className="flex flex-wrap gap-4 text-sm text-blue-200">
                 <div>
@@ -72,8 +72,8 @@ export default function ProductDetailsPage() {
           </section>
 
           {/* HØJRE SIDE: “kurv”-boks */}
-          <aside className="h-fit rounded-3xl border border-orange-400/40 bg-black/40 p-6">
-            <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-orange-200">Din kurv</h2>
+          <aside className="h-fit rounded-3xl border border-white-400/40 bg-black/40 p-6">
+            <h2 className="mb-4 text-sm font-semibold uppercase tracking-wide text-white-200">Din kurv</h2>
 
             <ul className="mb-4 space-y-2 text-sm">
               <li className="flex justify-between">
@@ -87,7 +87,7 @@ export default function ProductDetailsPage() {
               <span>{product.price},-</span>
             </div>
 
-            <Link href="/cart" className="block w-full rounded-full border border-orange-400 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-orange-100 transition hover:bg-orange-400 hover:text-black">
+            <Link href="/cart" className="block w-full rounded-full border border-white-400 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-orange-100 transition hover:bg-white-400 hover:text-black">
               Gå til betaling
             </Link>
           </aside>
