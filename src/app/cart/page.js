@@ -49,7 +49,7 @@ export default function CartPage() {
               </div>
 
               {/* BETAL NU KNAP */}
-              <button className="w-full rounded-full border border-orange-400 px-4 py-3 text-center text-sm font-bold uppercase tracking-wide text-orange-100 transition hover:bg-orange-400 hover:text-black">Betal nu</button>
+              <button className="w-full rounded-full border border-blue-400 px-4 py-3 text-center text-sm font-bold uppercase tracking-wide text-orange-100 transition hover:bg-blue-400 hover:text-white">Betal nu</button>
             </div>
           </>
         )}
