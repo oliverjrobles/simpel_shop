@@ -31,7 +31,7 @@ export default function ProductDetailsPage() {
         <div className="mx-auto max-w-6xl grid gap-10 md:grid-cols-[2fr,1fr]">
           {/* VENSTRE SIDE: billede + info */}
           <section>
-            <Link href="/produkter" className="text-sm text-blue-200 hover:text-blue-200">
+            <Link href="/produkter" className="text-sm text-white-200 hover:text-blue-200">
               &lt; Tilbage
             </Link>
 
@@ -43,7 +43,7 @@ export default function ProductDetailsPage() {
 
               {/* tekst */}
               <div className="flex-1 space-y-4">
-                <h1 className="text-2xl font-semibold text-blue-200">{product.title}</h1>
+                <h1 className="text-2xl font-semibold text-white-200">{product.title}</h1>
                 <p className="text-sm text-neutral-300">{product.description}</p>
 
                 <p className="text-lg font-medium text-white-300">{product.price},- kr</p>
@@ -54,7 +54,7 @@ export default function ProductDetailsPage() {
               </div>
             </div>
 
-            {/* Simple “reviews”-sektion */}
+            {/* Simple reviews-sektion */}
             <section className="mt-10 border-t border-neutral-800 pt-6">
               <h2 className="mb-3 text-lg font-semibold text-white-200">Reviews</h2>
               <p className="text-sm text-neutral-300 mb-2">Rating: {product.rating} ★</p>
@@ -87,7 +87,7 @@ export default function ProductDetailsPage() {
               <span>{product.price},-</span>
             </div>
 
-            <Link href="/cart" className="block w-full rounded-full border border-white-400 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-orange-100 transition hover:bg-white-400 hover:text-black">
+            <Link href="/cart" className="block w-full rounded-full border border-white-400 px-4 py-2 text-center text-xs font-semibold uppercase tracking-wide text-white-100 transition hover:bg-blue-400 hover:text-white">
               Gå til betaling
             </Link>
           </aside>
